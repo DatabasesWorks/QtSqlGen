@@ -1,9 +1,8 @@
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QTSqlGen", "QTSqlGen.vcproj", "{1BD3AD6A-894E-4A67-AD47-BA2CB7D78404}"
-	GlobalSection(Qt) = preSolution
-		Integration = True
-	EndGlobalSection
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QTSqlGen", "QTSqlGen.vcxproj", "{1BD3AD6A-894E-4A67-AD47-BA2CB7D78404}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +17,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E7F7F2AE-A0BE-4A82-BB76-0B4B200551B7}
+	EndGlobalSection
+	GlobalSection(Qt) = preSolution
+		Integration = True
 	EndGlobalSection
 EndGlobal
