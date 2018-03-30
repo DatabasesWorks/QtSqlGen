@@ -1,6 +1,6 @@
 //The MIT License
 //
-//Copyright (c) 2006-2010 Michael Simpson
+//Copyright (c) 2006-2018 Michael Simpson (michaelsimpson@icloud.com)
 //
 //Permission is hereby granted, free of charge, to any person obtaining a copy
 //of this software and associated documentation files (the "Software"), to deal
@@ -24,10 +24,9 @@
 
 ProjectNameDialog::ProjectNameDialog
 (
-	QWidget* parent, 
-	Qt::WFlags flags
+	QWidget* parent
 ) : 
-	QDialog(parent, flags)
+	QDialog(parent, Qt::WindowType::Dialog)
 {
 	setupUi(this);
 }

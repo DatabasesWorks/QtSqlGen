@@ -1,6 +1,6 @@
 //The MIT License
 //
-//Copyright (c) 2006-2010 Michael Simpson
+//Copyright (c) 2006-2018 Michael Simpson (michaelsimpson@icloud.com)
 //
 //Permission is hereby granted, free of charge, to any person obtaining a copy
 //of this software and associated documentation files (the "Software"), to deal
@@ -40,10 +40,9 @@ QMap<QString, Column::Type> gDataMap;
 
 QTSqlGen::QTSqlGen
 (
-	QWidget* parent, 
-	Qt::WFlags flags
+	QWidget* parent
 ) : 
-	QDialog(parent, flags),
+	QDialog(parent, Qt::WindowType::Dialog),
 	_projectGUID(QUuid::createUuid().toString().toUpper()),
 	_now(QDate::currentDate())
 {
@@ -60,7 +59,6 @@ QTSqlGen::QTSqlGen
 	AppendOutput("Paths:");
 	for (int i = 0; i < paths.size(); i++) 
 		AppendOutput("   " + paths.at(i));
-
 }
 
 QTSqlGen::~QTSqlGen()
@@ -666,8 +664,8 @@ void QTSqlGen::GenCode
 
 			StandardReplacements(header);
 
-			header.replace("<%table%>", (*iter)._name.toAscii());
-			header.replace("<%TABLE%>", tableNameDefine.toAscii());
+			header.replace("<%table%>", (*iter)._name.toLatin1());
+			header.replace("<%TABLE%>", tableNameDefine.toLatin1());
 
 			QFile headerFile;
 			QString headerFilePath = _targetPath->text() + "/" + (*iter)._name + fileName + ".h";
@@ -715,15 +713,15 @@ void QTSqlGen::GenCode
 
 			StandardReplacements(sourceText);
 
-			sourceText.replace("<%table%>", (*iter)._name.toAscii());
-			sourceText.replace("<%TABLE%>", tableNameDefine.toAscii());
+			sourceText.replace("<%table%>", (*iter)._name.toLatin1());
+			sourceText.replace("<%TABLE%>", tableNameDefine.toLatin1());
 
 			QString createStatement((*iter)._createStatement);
 			createStatement.replace("\"", ""); 
 			createStatement.replace("\n", " ");
 			createStatement.replace("\r", " ");
 			createStatement.replace("  ", " ");
-			sourceText.replace("<%createStmt%>", createStatement.toAscii());
+			sourceText.replace("<%createStmt%>", createStatement.toLatin1());
 
 			QFile cppFile;
 			QString cppFilePath = _targetPath->text() + "/" + (*iter)._name + fileName + ".cpp";
@@ -818,8 +816,8 @@ QString QTSqlGen::GenerateFieldType
 		fieldTypeTemplate = templateFile.readAll();
 
 		fieldTypeTemplate.replace("<%fieldType%>", fieldType);
-		fieldTypeTemplate.replace("<%uName%>", uName.toAscii());
-		fieldTypeTemplate.replace("<%name%>", columnName.toAscii());
+		fieldTypeTemplate.replace("<%uName%>", uName.toLatin1());
+		fieldTypeTemplate.replace("<%name%>", columnName.toLatin1());
 
 		StandardReplacements(fieldTypeTemplate);
 
@@ -892,10 +890,10 @@ QString QTSqlGen::GenerateSelector
 	{
 		accessor = templateFile.readAll();
 
-		accessor.replace(QByteArray("<%uName%>"), uName.toAscii());
-		accessor.replace(QByteArray("<%tableName%>"), tableName.toAscii());
-		accessor.replace(QByteArray("<%lName%>"), lName.toAscii());
-		accessor.replace(QByteArray("<%name%>"), name.toAscii());
+		accessor.replace(QByteArray("<%uName%>"), uName.toLatin1());
+		accessor.replace(QByteArray("<%tableName%>"), tableName.toLatin1());
+		accessor.replace(QByteArray("<%lName%>"), lName.toLatin1());
+		accessor.replace(QByteArray("<%name%>"), name.toLatin1());
 
 		StandardReplacements(accessor);
 	}
@@ -989,10 +987,10 @@ void QTSqlGen::GenRecordHeader
 
 		StandardReplacements(header);
 
-		header.replace("<%table%>", tableName.toAscii());
-		header.replace("<%TABLE%>", TABLENAME.toAscii());
-		header.replace("<%fieldEnum%>", fieldEnums.toAscii());
-		header.replace("<%accessors%>", accessors.toAscii());
+		header.replace("<%table%>", tableName.toLatin1());
+		header.replace("<%TABLE%>", TABLENAME.toLatin1());
+		header.replace("<%fieldEnum%>", fieldEnums.toLatin1());
+		header.replace("<%accessors%>", accessors.toLatin1());
 		
 		QString headerFilePath = _targetPath->text() + "/" + table._name + "Record.h";
 		QFile headerFile;
@@ -1076,13 +1074,13 @@ void QTSqlGen::GenRecordSource
 
 		StandardReplacements(cpp);
 
-		cpp.replace("<%table%>", tableName.toAscii());
-		cpp.replace("<%fields%>", fields.toAscii());
-		cpp.replace("<%binds%>", binds.toAscii());
-		cpp.replace("<%accessors%>", accessors.toAscii());
+		cpp.replace("<%table%>", tableName.toLatin1());
+		cpp.replace("<%fields%>", fields.toLatin1());
+		cpp.replace("<%binds%>", binds.toLatin1());
+		cpp.replace("<%accessors%>", accessors.toLatin1());
 		cpp.replace("<%fieldCount%>", QByteArray::number(table._columns.size()));
 
-		cpp.replace("<%propertyDataTypes%>", propertyDataTypes.toAscii());
+		cpp.replace("<%propertyDataTypes%>", propertyDataTypes.toLatin1());
 		
 		QString cppFilePath = _targetPath->text() + "/" + table._name + "Record.cpp";
 		QFile cppFile;
@@ -1140,9 +1138,9 @@ void QTSqlGen::GenSelectionHeader
 
 		StandardReplacements(header);
 
-		header.replace("<%table%>", tableName.toAscii());
-		header.replace("<%TABLE%>", TABLENAME.toAscii());
-		header.replace("<%accessors%>", accessors.toAscii());
+		header.replace("<%table%>", tableName.toLatin1());
+		header.replace("<%TABLE%>", TABLENAME.toLatin1());
+		header.replace("<%accessors%>", accessors.toLatin1());
 		
 		QString headerFilePath = _targetPath->text() + "/" + table._name + "SelectionCriteria.h";
 		QFile headerFile;
@@ -1189,7 +1187,7 @@ void QTSqlGen::GenSelectionSource
 
 		StandardReplacements(cpp);
 
-		cpp.replace("<%table%>", tableName.toAscii());
+		cpp.replace("<%table%>", tableName.toLatin1());
 
 		QString cppFilePath = _targetPath->text() + "/" + table._name + "SelectionCriteria.cpp";
 		QFile cppFile;
@@ -1247,10 +1245,10 @@ QString QTSqlGen::GenerateAccessor
 		outType.replace(QString("&"), QString(""));
 		outType.replace(QString("const "), QString(""));
 
-		accessor.replace(QByteArray("<%uName%>"), uName.toAscii());
-		accessor.replace(QByteArray("<%inType%>"), inType.toAscii());
-		accessor.replace(QByteArray("<%name%>"), lName.toAscii());
-		accessor.replace(QByteArray("<%outType%>"), outType.toAscii());
+		accessor.replace(QByteArray("<%uName%>"), uName.toLatin1());
+		accessor.replace(QByteArray("<%inType%>"), inType.toLatin1());
+		accessor.replace(QByteArray("<%name%>"), lName.toLatin1());
+		accessor.replace(QByteArray("<%outType%>"), outType.toLatin1());
 
 		StandardReplacements(accessor);
 	}
@@ -1321,9 +1319,9 @@ QString QTSqlGen::GenerateAccessorSource
 	{
 		accessor = templateFile.readAll();
 
-		accessor.replace(QByteArray("<%uName%>"), uName.toAscii());
-		accessor.replace(QByteArray("<%tableName%>"), tableName.toAscii());
-		accessor.replace(QByteArray("<%name%>"), lName.toAscii());
+		accessor.replace(QByteArray("<%uName%>"), uName.toLatin1());
+		accessor.replace(QByteArray("<%tableName%>"), tableName.toLatin1());
+		accessor.replace(QByteArray("<%name%>"), lName.toLatin1());
 
 		StandardReplacements(accessor);
 	}
@@ -1353,8 +1351,8 @@ QString QTSqlGen::GenerateTableRoutine
 
 		StandardReplacements(tableRoutine);
 		
-		tableRoutine.replace("<%tableName%>", tableName.toAscii());
-		tableRoutine.replace("<%variableName%>", variableName.toAscii());
+		tableRoutine.replace("<%tableName%>", tableName.toLatin1());
+		tableRoutine.replace("<%variableName%>", variableName.toLatin1());
 
 	}
 
@@ -1529,7 +1527,7 @@ void QTSqlGen::WriteProject()
 					currentProject->_dynamicLibrary ? "dll" : "staticlib" );
 
 				templateStr.replace(QByteArray("<%linkagedef%>"), 
-					currentProject->_dynamicLibrary ? QByteArray("BASE_DLL ") + _dllExportDefine.toAscii() : "BASE_STATIC" );
+					currentProject->_dynamicLibrary ? QByteArray("BASE_DLL ") + _dllExportDefine.toLatin1() : "BASE_STATIC" );
 
 				srcFile.write(templateStr);
 
@@ -1591,17 +1589,17 @@ void QTSqlGen::StandardReplacements
 {
 	QString PRODUCTNAME = _productName.toUpper();
 
-	replaceMe.replace("<%PRODUCTNAME%>", PRODUCTNAME.toAscii());
-	replaceMe.replace("<%productInclude%>", _productInclude.toAscii());
-	replaceMe.replace("<%productName%>", _productName.toAscii());
-	replaceMe.replace("<%projectGUID%>", _projectGUID.toAscii());
-	replaceMe.replace("<%dllExport%>", _dllExport.toAscii());
-	replaceMe.replace("<%dllExportDefine%>", _dllExportDefine.toAscii());
-	replaceMe.replace("<%includeFiles%>", _headerFiles.toAscii());
-	replaceMe.replace("<%sources%>", _sources.toAscii());
-	replaceMe.replace("<%headers%>", _headers.toAscii());
-	replaceMe.replace("<%headerFiles%>", _headerFiles.toAscii());
-	replaceMe.replace("<%date%>", _now.toString().toAscii());
+	replaceMe.replace("<%PRODUCTNAME%>", PRODUCTNAME.toLatin1());
+	replaceMe.replace("<%productInclude%>", _productInclude.toLatin1());
+	replaceMe.replace("<%productName%>", _productName.toLatin1());
+	replaceMe.replace("<%projectGUID%>", _projectGUID.toLatin1());
+	replaceMe.replace("<%dllExport%>", _dllExport.toLatin1());
+	replaceMe.replace("<%dllExportDefine%>", _dllExportDefine.toLatin1());
+	replaceMe.replace("<%includeFiles%>", _headerFiles.toLatin1());
+	replaceMe.replace("<%sources%>", _sources.toLatin1());
+	replaceMe.replace("<%headers%>", _headers.toLatin1());
+	replaceMe.replace("<%headerFiles%>", _headerFiles.toLatin1());
+	replaceMe.replace("<%date%>", _now.toString().toLatin1());
 }
 
 
@@ -1715,10 +1713,10 @@ void QTSqlGen::WriteDatabaseFiles()
 					view++;
 				}
 
-				templateStr.replace("<%tables%>", tables.toAscii());
-				templateStr.replace("<%views%>", views.toAscii());
-				templateStr.replace("<%tablePtrs%>", tablePtrs.toAscii());
-				templateStr.replace("<%includes%>", includes.toAscii());
+				templateStr.replace("<%tables%>", tables.toLatin1());
+				templateStr.replace("<%views%>", views.toLatin1());
+				templateStr.replace("<%tablePtrs%>", tablePtrs.toLatin1());
+				templateStr.replace("<%includes%>", includes.toLatin1());
 				StandardReplacements(templateStr);
 				
 				srcFile.write(templateStr);
@@ -1814,9 +1812,9 @@ void QTSqlGen::WriteDatabaseFiles()
 
 				StandardReplacements(templateStr);
 
-				templateStr.replace("<%destructors%>", destructors.toAscii());
-				templateStr.replace("<%initializers%>", statics.toAscii());
-				templateStr.replace("<%tableRoutines%>", tableRoutines.toAscii());
+				templateStr.replace("<%destructors%>", destructors.toLatin1());
+				templateStr.replace("<%initializers%>", statics.toLatin1());
+				templateStr.replace("<%tableRoutines%>", tableRoutines.toLatin1());
 				
 				srcFile.write(templateStr);
 

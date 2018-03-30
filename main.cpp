@@ -1,6 +1,6 @@
 //The MIT License
 //
-//Copyright (c) 2006-2010 Michael Simpson
+//Copyright (c) 2006-2018 Michael Simpson (michaelsimpson@icloud.com)
 //
 //Permission is hereby granted, free of charge, to any person obtaining a copy
 //of this software and associated documentation files (the "Software"), to deal
@@ -20,8 +20,9 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //THE SOFTWARE.
 
-#include <QtGui/QApplication>
 #include "QTSqlGen.h"
+
+#include <QApplication>
 
 quint32 main(int argc, char *argv[])
 {
@@ -29,10 +30,10 @@ quint32 main(int argc, char *argv[])
 
 	a.setOrganizationDomain("opensource.org");
 	a.setOrganizationName("OpenSource");
-	a.setApplicationName("QTSqliteGen");
+	a.setApplicationName("QTSqlGen");
 
     QTSqlGen w;
     w.show();
-    a.connect(&a, SIGNAL(lastWindowClosed()), &a, SLOT(quit()));
+    a.connect(&a, &QApplication::lastWindowClosed, &a, &QApplication::quit);
     return a.exec();
 }
