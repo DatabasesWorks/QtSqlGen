@@ -25,7 +25,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {73D8963A-3D67-432C-9398-A423932EF667}
+		SolutionGuid = {E7F7F2AE-A0BE-4A82-BB76-0B4B200551B7}
 	EndGlobalSection
 	GlobalSection(Qt) = preSolution
 		Integration = True
