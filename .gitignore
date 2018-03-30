@@ -1,0 +1,6 @@
+# Windows artifacts
+.vs
+*.pdb
+Debug
+GeneratedFiles
+x64

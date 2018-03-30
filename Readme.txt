@@ -1,6 +1,6 @@
 //The MIT License
 //
-//Copyright (c) 2008 Michael Simpson
+//Copyright (c) 2008-2018 Michael Simpson (michaelsimpson@icloud.com)
 //
 //Permission is hereby granted, free of charge, to any person obtaining a copy
 //of this software and associated documentation files (the "Software"), to deal
@@ -20,9 +20,7 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //THE SOFTWARE.
 
-This project was built on VS2008 with the commercial version of QT 4.4.  I don't have
-any experience with MacOSx or KDE/Linux but I can't imagine that this source won't compile
-on those platforms.
+This project was built on VS2017 with the commercial version of QT 5.10.  This should also build and run in MacOS and Linux.
 
 I pretty much just build it where I need it.  I only run it when I make schema changes to my database.
 This project saves me ALOT of time when programming code that runs against Sqlite.
