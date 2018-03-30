@@ -40,6 +40,30 @@
     <ClCompile Include="SqlProjects.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_AboutDlg.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_AboutDlg.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ProjectNameDialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ProjectNameDialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QTSqlGen.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QTSqlGen.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_SqlProjects.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_SqlProjects.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
     <ClCompile Include="Resources\ODBCDatabase.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
@@ -61,60 +85,11 @@
     <ClCompile Include="Resources\View.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_AboutDlg.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_AboutDlg.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_ProjectNameDialog.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_ProjectNameDialog.cpp">
-    <ClCompile Include="qrc_QTSqlGen.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_SqlProjects.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_SqlProjects.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_QTSqlGen.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_QTSqlGen.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_SqlProjects.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_SqlProjects.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="qrc_QTSqlGen.cpp">
-    <ClCompile Include="GeneratedFiles\Debug\moc_ProjectNameDialog.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_ProjectNameDialog.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_AboutDlg.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_AboutDlg.cpp">
+    <ClCompile Include="GeneratedFiles\qrc_QTSqlGen.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="QTSqlGen.rc">
-      <Filter>Source Files</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="GeneratedFiles\ui_AboutDialog.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
@@ -124,8 +99,47 @@
     <ClInclude Include="GeneratedFiles\ui_QTSqlGen.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Table.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\ODBCDatabase.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\ODBCDrivers.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\Record.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\RecordBase.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\SelectionCriteria.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\SqliteDatabase.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\Table.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\View.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <CustomBuild Include="AboutDialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ProjectNameDialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="QTSqlGen.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
     <CustomBuild Include="AboutDlg.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
@@ -138,137 +152,109 @@
     <CustomBuild Include="SqlProjects.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="Table.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="AboutDialog.ui">
-      <Filter>Form Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="ProjectNameDialog.ui">
-      <Filter>Form Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="QTSqlGen.ui">
-      <Filter>Form Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\About.png">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\Accessor">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\AccessorSourceBoolean">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\AccessorSourceBytes">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\AccessorSourceDate">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\AccessorSourceDateTime">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\AccessorSourceGUID">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\AccessorSourceInt">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\AccessorSourceReal">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\AccessorSourceString">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\AccessorSourceTime">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\add.png">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\CreateVCProj.bat">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\delete.png">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\fieldType">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\Header">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\Header2">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\License.txt">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\ODBCDatabase.h">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\ODBCDrivers.h">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\pro">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\QTSqlGen.png">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
     <CustomBuild Include="QTSqlGen.qrc">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\Record.h">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\RecordBase.h">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\SelectionCriteria.h">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\SelectorBoolean">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\SelectorBytes">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\SelectorDate">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\SelectorDateTime">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\SelectorGUID">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\SelectorInt">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\SelectorReal">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\SelectorString">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\SelectorTime">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\SqliteDatabase.h">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\Table.h">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\TableRoutine">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Resources\View.h">
       <Filter>Resource Files</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Readme.txt" />
+    <ResourceCompile Include="QTSqlGen.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\About.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\add.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\delete.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\QTSqlGen.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\QTSqlGen.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Accessor">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\AccessorSourceBoolean">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\AccessorSourceDate">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\AccessorSourceDateTime">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\AccessorSourceGUID">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\AccessorSourceInt">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\AccessorSourceReal">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\AccessorSourceString">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\AccessorSourceTime">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\CreateVCProj.bat">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\fieldType">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Header">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Header2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\pro">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\SelectorBoolean">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\SelectorDate">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\SelectorDateTime">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\SelectorGUID">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\SelectorInt">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\SelectorReal">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\SelectorString">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\SelectorTime">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\SourceAccessor">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\TableRoutine">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Resources\License.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
