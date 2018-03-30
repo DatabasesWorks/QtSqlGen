@@ -3,7 +3,7 @@
 
 //The MIT License
 //
-//Copyright (c) 2006-2010 Michael Simpson
+//Copyright (c) 2006-2018 Michael Simpson (michaelsimpson@icloud.com)
 //
 //Permission is hereby granted, free of charge, to any person obtaining a copy
 //of this software and associated documentation files (the "Software"), to deal
@@ -32,7 +32,7 @@ class AboutDlg :
     Q_OBJECT
 
 public:
-    AboutDlg(QWidget *parent = NULL, Qt::WFlags flags = 0);
+    AboutDlg(QWidget* parent = nullptr);
     ~AboutDlg();
 
 public slots:

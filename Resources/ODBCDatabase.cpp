@@ -152,11 +152,11 @@ void <%productName%>Database::CreateConnection
 
 void <%productName%>Database::BuildConnectionString()
 {
-	_driverString.replace("<%server%>", _host.toAscii());
-	_driverString.replace("<%port%>", _port.toAscii());
-	_driverString.replace("<%database%>", _databaseName.toAscii());
-	_driverString.replace("<%user%>", _userName.toAscii());
-	_driverString.replace("<%pass%>", _password.toAscii());
+	_driverString.replace("<%server%>", _host.toLatin1());
+	_driverString.replace("<%port%>", _port.toLatin1());
+	_driverString.replace("<%database%>", _databaseName.toLatin1());
+	_driverString.replace("<%user%>", _userName.toLatin1());
+	_driverString.replace("<%pass%>", _password.toLatin1());
 
 	_connectionString = _driverString;
 }
